@@ -1,0 +1,27 @@
+#section_faq {
+    h2{
+        font-size: 2rem;
+    }
+    @media(min-width: 576px) {
+        h2 {
+            font-size: 3.5rem;
+        }
+
+    }
+
+    background-color: #443a50;
+
+    .acordion_body {
+        background-color: #443a50;
+        color: white;
+    }
+
+    .accordion-item {
+        border: none;
+    }
+
+    .accordion-item button {
+        background-color: #3b2e4a;
+        color: #fff;
+    }
+}
