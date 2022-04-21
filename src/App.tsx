@@ -2,10 +2,13 @@ import React from 'react';
 import './App.scss'
 import Navigation from './components/Navigation/Navigation';
 import Hero from "./components/Hero/Hero";
-import CreditCard from './components/creditCard/CreditCard';
-import Cards from "./components/Cards/Cards"
-import InfoSection from './components/InfoSection/InfoSection';
+import CreditCard from "./components/CreditCard/CreditCard";
+import CardList from "./components/CardList/CardList";
+import Institutional from "./components/Institutional/Institutional"
+import { Posts } from './assets/posts';
 import Faq from "./components/Faq/Faq";
+import FooterSection from "./components/FooterSection/FooterSection"
+
 
 
 const App = () => {
@@ -14,9 +17,10 @@ const App = () => {
       <Navigation/>
       <Hero />
       <CreditCard />
-      <Cards />
-      <InfoSection />
+      <CardList array={Posts} />
+      <Institutional />
       <Faq />
+      <FooterSection />
     </div>
   );
 }

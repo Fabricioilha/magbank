@@ -1,65 +1,39 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCreditCard, faMobile, faCartShopping, faWallet } from '@fortawesome/free-solid-svg-icons'
-import { Col, Row, Container, Image } from "react-bootstrap";
-import "./CreditCard.scss"
-import cartao01 from "../../assets/images/credit_card_img.jpg";
+import { Container,Row,Col,Image } from "react-bootstrap";
+import {faCreditCard, faMobile, faShoppingCart, faWallet} from "@fortawesome/free-solid-svg-icons";
+import creditcard from "../../assets/images/credit_card_img.jpg";
+import IconList from "../IconList";
+import "./CreditCard.scss";
 
 
 const CreditCard = () => {
-    return (
-        <section id="section-creditcard">
-            <Container>
-                <Row className="py-5 my-5">
-                    <Col lg >
-                        <Row>
-                            <Col>
-                                <h2>Cartão de Crédito</h2>
-                            </Col>
-                        </Row>
-
-                        <Row>
-                            <Col >
-                                <Row className="mt-5">
-                                    <Col lg >
-                                        <div className="list">                                        
-                                            <i><FontAwesomeIcon icon={faCreditCard} /></i>
-                                            <p>Crédito Pessoal</p>
-                                        </div>
-                                    </Col>                                   
-                                    <Col lg>
-                                        <div className="list">
-                                            <i><FontAwesomeIcon icon={faCartShopping} /></i>
-                                            <p>Pagamento Online</p>
-                                        </div>
-                                    </Col>
-                                </Row>
-
-                                <Row className="mb-5">
-                                    <Col lg>
-                                        <div className="list">
-                                            <i><FontAwesomeIcon icon={faMobile} /></i>
-                                            <p>APP</p>
-                                        </div>
-                                    </Col>
-                                    <Col lg>
-                                        <div className="list">
-                                            <i><FontAwesomeIcon icon={faWallet} /></i>
-                                            <p>Carteira Digital</p>
-                                        </div>
-                                    </Col>
-                                </Row>
-                                
-                            </Col>
-                        </Row>
-                    </Col>
-                    <Col className="col-lg-5">
-                        <Image className="mx-auto d-block img-fluid rounded-3" src={cartao01} />
-                    </Col>
-
-                </Row>
-            </Container>
-        </section>
+    return(
+        <Container>
+            <Row>
+                <Col xs={12} lg={7} className="mb-5 mb-lg-0 px-5 px-lg-0">
+                    <Row>
+                        <h2 className="display-4 my-5 credit-card-title">Cartão de Crédito</h2>
+                    </Row>
+                    <Row>
+                        <Col xs={12} lg={6} className="mb-4">
+                            <IconList icon={faCreditCard} size="2x" color="#f05656" className="h5 text-muted" >Crédito pessoal</IconList> 
+                        </Col>
+                        <Col xs={12} lg={6} className="mb-4">
+                            <IconList icon={faMobile} size="2x" color="#f05656" className="h5 text-muted" >APP</IconList>                            
+                        </Col>
+                        <Col xs={12} lg={6} className="mb-4">
+                            <IconList icon={faShoppingCart} size="2x" color="#f05656" className="h5 text-muted" >Pagamentos online</IconList>                            
+                        </Col>
+                        <Col xs={12} lg={6} className="mb-4">
+                            <IconList icon={faWallet} size="2x" color="#f05656" className="h5 text-muted" >Carteira digital</IconList>
+                        </Col>
+                    </Row>
+                </Col>
+                <Col xs={12} lg={5} className="my-5">
+                    <Image src={creditcard} width="100%" className="rounded-3" radioGroup="" fluid alt="Magbank Credit Card Exemple" />
+                </Col>
+            </Row>
+        </Container>        
     )
 }
 

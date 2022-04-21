@@ -1,0 +1,20 @@
+.sectioin_institutional {
+    background-image: url("../../assets/images/bg_secttion_info.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    .info-text {
+        font-family: "Helvetica Neue";
+        h2 {
+            font-weight: 300;
+            font-size: 3.5rem;
+        }
+        @media(max-width:576px){
+            h2{
+                font-size:2.5rem;
+            }
+        }
+        p {
+            font-size: 1.125rem;
+        }
+    }
+}
