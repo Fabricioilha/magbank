@@ -1,10 +1,13 @@
 import React from "react";
-import { Navbar, Container, Nav, NavDropdown, ButtonGroup, Button, DropdownButton, Dropdown } from "react-bootstrap";
+import { Navbar, Container, Nav, ButtonGroup, Button, DropdownButton, Dropdown } from "react-bootstrap";
 import logo from "../../assets/images/navbar_logo.svg"
 import './Navigation.scss'
 
+type Props = {
+    clickBtn: ()=> void
+}
 
-const Navigation = () => {
+const Navigation = ({clickBtn}:Props) => {
     return(
         <Navbar variant="dark" expand="lg">
             <Container>
@@ -24,11 +27,11 @@ const Navigation = () => {
                         <Nav.Link href="#faq">FAQ</Nav.Link>
                     </Nav>
                     <ButtonGroup >
-                        <Button variant="outline-light">Acessar minha conta</Button>
-                        <DropdownButton variant="outline-light" as={ButtonGroup} title="Abra sua conta" id="bg-nested-dropdown">
+                        <DropdownButton variant="outline-light" as={ButtonGroup} title="Acessar minha conta" id="bg-nested-dropdown">
                             <Dropdown.Item eventKey="1">Dropdown link</Dropdown.Item>
                             <Dropdown.Item eventKey="2">Dropdown link</Dropdown.Item>
                         </DropdownButton>
+                        <Button variant="outline-light" onClick={clickBtn}>Abra sua conta</Button>
                     </ButtonGroup>
                 </Navbar.Collapse>
             </Container>

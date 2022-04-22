@@ -4,7 +4,12 @@ import { faMobileScreenButton, faMobileButton, faGlobe, faShieldHalved } from "@
 import "./Institutional.scss";
 import IconList from "../IconList";
 
-const Institutional = () => {
+
+type Props = {
+    clickBtn: ()=> void
+}
+
+const Institutional = ({clickBtn}:Props) => {
     return(
         <section className="sectioin_institutional py-5 text-white">
             <Container>
@@ -20,7 +25,7 @@ const Institutional = () => {
                             <IconList size="2x" icon={faShieldHalved}  color="#fff" className="fs-4">Transações mais seguras</IconList>
                         </Row>
 
-                        <Button variant="outline-light" className="my-5" size="lg">Abra sua conta</Button>
+                        <Button variant="outline-light" className="my-5" size="lg" onClick={clickBtn}>Abra sua conta</Button>
                     </Col>
                 </Row>
             </Container>

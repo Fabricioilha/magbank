@@ -4,7 +4,11 @@ import logoMobile from "../../assets/images/index_logo_mobile.png";
 import LogoDesktop from "../../assets/images/index_logo_desktop.png"
 import "./Hero.scss";
 
-const Hero = () => {
+type Props = {
+    clickBtn: ()=> void
+}
+
+const Hero = ({clickBtn}:Props) => {
     return (
 
     <section id="section_hero">
@@ -16,7 +20,7 @@ const Hero = () => {
                     </Col>
                     <Col lg className="text-lg-start">
                         <p className="mt-5 mb-5">Pague suas contas pelo nosso App</p>
-                        <Button variant="outline-light" id="btn_hero">Abra sua conta</Button>
+                        <Button variant="outline-light" id="btn_hero" onClick={clickBtn}>Abra sua conta</Button>
                     </Col>
                 </Row>
             </Container>

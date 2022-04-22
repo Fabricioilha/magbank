@@ -9,8 +9,11 @@ type Posts = {
     excerpt:string,
     action:string
 }
-
-const CardList = ({ array }: any) => {
+type Props = {
+    clickBtn: () => void,
+    array: any
+}
+const CardList = ({array, clickBtn}:Props) => {
     return (
         <Container>
             <Row>
@@ -31,7 +34,7 @@ const CardList = ({ array }: any) => {
             </Row>
             <Row>
                 <Col lg={12} className=" my-5 d-flex">
-                    <Button className='mx-auto' variant='success' size="lg">Abra sua conta</Button>
+                    <Button className='mx-auto' variant='success' size="lg" onClick={clickBtn}>Abra sua conta</Button>
                 </Col>
             </Row>
         </Container>
