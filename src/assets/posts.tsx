@@ -1,6 +1,6 @@
-import img01 from "./images/card_01.jpg";
-import img02 from "./images/card_02.jpg";
-import img03 from "./images/card_03.jpg";
+import img01 from "./images/page_Home/card_01.jpg";
+import img02 from "./images/page_Home/card_02.jpg";
+import img03 from "./images/page_Home/card_03.jpg";
 
 export const Posts = [
     {

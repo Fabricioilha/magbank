@@ -1,7 +1,7 @@
 import React from "react";
 import { Container,Row,Col,Image } from "react-bootstrap";
 import {faCreditCard, faMobile, faShoppingCart, faWallet} from "@fortawesome/free-solid-svg-icons";
-import creditcard from "../../assets/images/credit_card_img.jpg";
+import creditcard from "../../../assets/images/page_Home/credit_card_img.jpg";
 import IconList from "../IconList";
 import "./CreditCard.scss";
 
