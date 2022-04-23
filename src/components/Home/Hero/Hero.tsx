@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
-import logoMobile from "../../assets/images/index_logo_mobile.png";
-import LogoDesktop from "../../assets/images/index_logo_desktop.png"
+import logoMobile from "../../../assets/images/page_Home/index_logo_mobile.png";
+import LogoDesktop from "../../../assets/images/page_Home/index_logo_desktop.png"
 import "./Hero.scss";
 
 type Props = {

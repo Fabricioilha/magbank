@@ -1,8 +1,8 @@
 import React from "react";
 import { Col, Container, Row, Image } from "react-bootstrap";
-import googleplay from "../../assets/images/googleplay.png"
-import applestore from "../../assets/images/applestore.png"
-import logofooter from "../../assets/images/MAGbank.png";
+import googleplay from "../../../assets/images/page_Home/googleplay.png"
+import applestore from "../../../assets/images/page_Home/applestore.png"
+import logofooter from "../../../assets/images/page_Home/MAGbank.png";
 import "./FooterSection.scss"
 import { faFacebookSquare, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

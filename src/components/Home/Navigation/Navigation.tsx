@@ -1,6 +1,8 @@
 import React from "react";
 import { Navbar, Container, Nav, ButtonGroup, Button, DropdownButton, Dropdown } from "react-bootstrap";
-import logo from "../../assets/images/navbar_logo.svg"
+import { Link } from "react-router-dom";
+import logo from "../../../assets/images/page_Home/navbar_logo.svg"
+import Login from "../../../views/Login/Login";
 import './Navigation.scss'
 
 type Props = {
@@ -28,7 +30,9 @@ const Navigation = ({clickBtn}:Props) => {
                     </Nav>
                     <ButtonGroup >
                         <DropdownButton variant="outline-light" as={ButtonGroup} title="Acessar minha conta" id="bg-nested-dropdown">
-                            <Dropdown.Item eventKey="1">Dropdown link</Dropdown.Item>
+                            <Dropdown.Item eventKey="1">
+                                <Link to="/login" className="text-decoration-none">Login</Link>
+                            </Dropdown.Item>
                             <Dropdown.Item eventKey="2">Dropdown link</Dropdown.Item>
                         </DropdownButton>
                         <Button variant="outline-light" onClick={clickBtn}>Abra sua conta</Button>
