@@ -7,7 +7,7 @@ import CardList from "../../components/Home/CardList/CardList";
 import { Posts } from '../../assets/posts';
 import Institutional from "../../components/Home/Institutional/Institutional"
 import Faq from "../../components/Home/Faq/Faq";
-import FooterSection from "../../components/Home/FooterSection/FooterSection"
+import FooterSection from "../../components/Global/FooterSection/FooterSection"
 import HomeModal from "../../components/Home/HomeModal"
 
 
