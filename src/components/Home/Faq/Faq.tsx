@@ -17,7 +17,7 @@ const Faq = () => {
     let colorK = (k:any) => k === op? "#fff" : "#a8a8a8";
 
     return (
-        <section className="section-faq">
+        <section className="section-faq" id="faq">
             <Container>
                 <Row>
                     <h2 className="text-center my-5 fs-1 text-white">Dúvidas frequentes</h2>

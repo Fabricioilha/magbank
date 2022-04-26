@@ -1,12 +1,13 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import FooterSection from "../../components/Global/FooterSection/FooterSection";
 import DashNavBar from "../../components/Dashboard/DashNavBar/DashNavBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
-import DashSaldo from "../../components/Dashboard/DashSaldo/DashSaldo";
-import "./Dashboard.scss"
-import DashTable from "../../components/Dashboard/DashTable/DashTable";
+import "./Dashboard.scss";
+import ContaCorrente from "../../components/Dashboard/ContaCorrente/ContaCorrente";
+import Pagamentos from "../../components/Dashboard/Pagamentos/Pagamentos";
+import { Routes, Route, Link } from "react-router-dom";
+import Extrato from "../../components/Dashboard/Extrato/Extrato";
 
 const Dashboard = () => {
     return (
@@ -31,38 +32,15 @@ const Dashboard = () => {
                             </Row>
                         </Col>
                     </Row>
-                    <Row> {/* Segunda linha */}
-                        <Col xs={12} md={3} className="p-0">  {/* 1ª Coluna - Menu */}
-                            <Link to="/dashboard" className="text-decoration-none ">
-                                <div className="dashBodyMenu actv ">
-                                    Minha conta
-                                </div>
-                            </Link>
-                            <Link to="/dashboard" className="text-decoration-none">
-                                <div className="dashBodyMenu ">
-                                    Pagamento
-                                </div>
-                            </Link>
-                            <Link to="/dashboard" className="text-decoration-none">
-                                <div className="dashBodyMenu ">
-                                    Extrato
-                                </div>
-                            </Link>
-                        </Col>
-                        <Col xs={12} md={9} className="my-5 my-md-0"> {/* Segunda Coluna dinamica */}
-                            <Row className="pb-5"><h2>Conta corrente</h2></Row>
-                            <Row>
-                                <Col xs={12} md={3}>
-                                    <DashSaldo />
-                                </Col>
-                                <Col xs={12} md={9}>
-                                    <DashTable />
-                                </Col>
-                            </Row>
-                        </Col>
-                    </Row>
+                    <Row> {/* Segunda linha Dinãmica */}
+                        <Routes>
+                            <Route path="" element={<ContaCorrente />} />
+                            <Route path="/pagamentos" element={<Pagamentos />} />
+                            <Route path="/extrato" element={<Extrato />} />
+                        </Routes>
+                    </Row>                    
                 </Container>
-                <FooterSection/>
+                <FooterSection />
             </div>
         </>
     )

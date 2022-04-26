@@ -22,7 +22,7 @@ const Home = () => {
     <div className="Home">
         <Navigation clickBtn={handleShow} />
         <Hero clickBtn={handleShow} />
-        <CreditCard />
+        <CreditCard/>
         <CardList array={Posts} clickBtn={handleShow}/>
         <Institutional clickBtn={handleShow} />
         <Faq />
