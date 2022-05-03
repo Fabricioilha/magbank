@@ -11,7 +11,7 @@ type Props = {
 
 const Institutional = ({clickBtn}:Props) => {
     return(
-        <section className="sectioin_institutional py-5 text-white">
+        <section className="sectioin_institutional py-5 text-white" id="quemsomos">
             <Container>
                 <Row>
                     <Col xs={0} lg={6}></Col>

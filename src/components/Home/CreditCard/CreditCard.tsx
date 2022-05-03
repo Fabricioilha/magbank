@@ -8,7 +8,7 @@ import "./CreditCard.scss";
 
 const CreditCard = () => {
     return(
-        <Container>
+        <Container id="cartao">
             <Row>
                 <Col xs={12} lg={7} className="mb-5 mb-lg-0 px-5 px-lg-0">
                     <Row>

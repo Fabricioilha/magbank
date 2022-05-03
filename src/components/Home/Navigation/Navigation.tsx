@@ -12,13 +12,15 @@ const Navigation = ({clickBtn}:Props) => {
     return(
         <Navbar variant="dark" expand="lg">
             <Container>
-                <Navbar.Brand href="#home">
-                    <img
-                        src={logo}
-                        height="30"
-                        className="d-inline-block align-top"
-                        alt="React Bootstrap logo"
-                    />
+                <Navbar.Brand>
+                    <Link to="/">
+                        <img
+                            src={logo}
+                            height="30"
+                            className="d-inline-block align-top"
+                            alt="React Bootstrap logo"
+                        />
+                    </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -30,9 +32,9 @@ const Navigation = ({clickBtn}:Props) => {
                     <ButtonGroup >
                         <DropdownButton variant="outline-light" as={ButtonGroup} title="Acessar minha conta" id="bg-nested-dropdown">
                             <Dropdown.Item eventKey="1">
-                                <Link to="/login" className="text-decoration-none">Login Pessoa Física</Link>
+                                <Link to="/login" className="text-decoration-none">Pessoa Física</Link>
                             </Dropdown.Item>
-                            <Dropdown.Item eventKey="2">Login Pessoa Jurídica</Dropdown.Item>
+                            <Dropdown.Item eventKey="2">Pessoa Jurídica</Dropdown.Item>
                         </DropdownButton>
                         <Button variant="outline-light" onClick={clickBtn}>Abra sua conta</Button>
                     </ButtonGroup>
